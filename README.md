@@ -28,9 +28,11 @@ For local development:
 3. Click **Load unpacked**.
 4. Select this repository folder.
 
-## Chrome Web Store Assets
+## Store Assets
 
-Release-ready store assets are in [store-assets](./store-assets):
+Release-ready store assets are attached to the latest GitHub Release:
+
+https://github.com/logdns/ChromeSnifferPlus-new/releases
 
 - `icon-128.png`
 - `promo-small-440x280.png`
@@ -38,6 +40,8 @@ Release-ready store assets are in [store-assets](./store-assets):
 - `marquee-1400x560.png`
 - `screenshot-overview-1280x800.png`
 - `listing.md`
+
+These binary assets are intentionally not tracked in the source tree.
 
 ## Build Store Packages
 
