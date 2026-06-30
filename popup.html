@@ -4,22 +4,23 @@ body {
     font-size: 14px;
     margin: 0;
     padding: 0;
+    width: 430px;
 }
-#app_list a {
-    width: 200px;
+.section-title {
+    color: #444;
+    font-weight: bold;
+    padding: 8px 10px 4px;
+}
+#app_list a, .remote-tech a {
     color: #555;
     text-decoration: none;
     display: block;
     padding: 5px;
-    border-bottom: 1px solid #ddd;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-#app_list a:last-child {
-    border-bottom: none;
-}
-#app_list a:focus, #app_list a:hover {
+#app_list a:focus, #app_list a:hover, .remote-tech a:focus, .remote-tech a:hover {
     text-decoration: none;
     background-color: #f5f5f5;
     color: #337ab7;
@@ -39,8 +40,58 @@ body {
     color: #a9a9a9;
     font-size: 12px;
 }
+.remote-controls {
+    align-items: center;
+    border-top: 1px solid #ddd;
+    display: none;
+    gap: 8px;
+    margin-top: 6px;
+    padding: 8px 10px;
+}
+.remote-controls button, .remote-controls a {
+    font-size: 12px;
+}
+.remote-status {
+    color: #666;
+    flex: 1;
+    font-size: 12px;
+    min-width: 0;
+}
+.remote-grid {
+    border-top: 1px solid #eee;
+    column-gap: 12px;
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    padding: 6px 0;
+}
+.remote-category {
+    break-inside: avoid;
+    min-width: 0;
+    padding: 0 8px 8px;
+}
+.remote-category h3 {
+    color: #555;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 8px 0 4px;
+}
+.remote-badge {
+    background: #f1f1f1;
+    border-radius: 3px;
+    color: #555;
+    font-size: 11px;
+    margin-left: 4px;
+    padding: 1px 4px;
+}
 </style>
-<script src="js/api.js"></script>
-<script src="js/popup.js"></script>
+<script src="js/apps.js"></script>
+<div class="section-title" id="local_title"></div>
 <div id="app_list"></div>
+<div class="remote-controls">
+    <button id="remote_detect"></button>
+    <span class="remote-status" id="remote_status"></span>
+    <a href="option.html" target="_blank" id="remote_options"></a>
+</div>
+<div id="remote_results" class="remote-grid"></div>
+<script src="js/popup.js"></script>
 <script src="js/analytics.js"></script>

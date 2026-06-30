@@ -8,7 +8,7 @@
 		"description": "extension short name."
 	},
 	"extDesc": {
-		"message": "Sniff web framework and javascript libraries run on browsing website.",
+		"message": "Sniff website frameworks, libraries, servers, and optional remote technology API results.",
 		"description": "extension description."
 	},
 	"extIntroTitle": {
@@ -31,8 +31,65 @@
 	"extIntroductionWebSever": {
 		"message": "Web Server: PHP, Apache, nginx, IIS ..."
 	},
+	"remoteDetectorOptionsTitle": {
+		"message": "Remote technology detection"
+	},
+	"remoteDetectorOptionsIntro": {
+		"message": "Optional lookup through free technology APIs. Target categories include JavaScript frameworks, CDN, security, payment processors, font scripts, JavaScript libraries, web frameworks, UI frameworks, and programming languages."
+	},
+	"remoteDetectorProviderLabel": {
+		"message": "Free API provider"
+	},
+	"technologyCheckerApiKeyLabel": {
+		"message": "TechnologyChecker API key"
+	},
+	"builtwithFreeApiKeyLabel": {
+		"message": "BuiltWith Free API key"
+	},
+	"optionsSave": {
+		"message": "Save"
+	},
+	"optionsSaved": {
+		"message": "Saved"
+	},
+	"localDetectorTitle": {
+		"message": "Local detection"
+	},
+	"remoteDetectorButton": {
+		"message": "API lookup"
+	},
+	"remoteDetectorOptions": {
+		"message": "Options"
+	},
+	"remoteDetectorReady": {
+		"message": "Free API lookup is optional"
+	},
+	"remoteDetectorLoading": {
+		"message": "Querying..."
+	},
+	"remoteDetectorFailed": {
+		"message": "Remote detection failed."
+	},
+	"remoteDetectorEmpty": {
+		"message": "No remote technologies found."
+	},
+	"remoteDetectorMissingKey": {
+		"message": "Configure the selected free API key in Options first."
+	},
+	"remoteDetectorUnsupportedUrl": {
+		"message": "Only HTTP and HTTPS pages can be queried."
+	},
+	"remoteDetectorCategories": {
+		"message": "categories"
+	},
+	"remoteDetectorConfidence": {
+		"message": "Confidence"
+	},
 	"extIntroductionSource": {
 		"message": "Source Code:"
+	},
+	"extIntroductionUpstream": {
+		"message": "Upstream Fork:"
 	},
 	"extIntroductionNotice": {
 		"message": "Developers always like to hide something, so there may be a miscarriage of justice."

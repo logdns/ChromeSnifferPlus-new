@@ -1,5 +1,9 @@
 # Privacy Policy
 
+## Remote technology lookup
+
+Remote technology lookup is optional and disabled unless you configure a free provider API key and click the popup lookup button. When used, the extension sends the current page hostname to the selected provider, currently TechnologyChecker or BuiltWith Free API. API keys are stored in Chrome extension storage on your device.
+
 The following privacy notice shall provide you with a general overview about the collection, processing and use (hereinafter together referred to as "processing") of your personal data.
 
 ## What kind of personal data do we process?

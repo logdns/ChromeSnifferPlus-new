@@ -1,41 +1,154 @@
 body {
-    background-color: #ebeff9;
-    font-family: arial, sans-serif;
-    font-size: 13px
+    background: #f4f7fb;
+    color: #1f2933;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+a {
+    color: #1a73e8;
 }
 
 .box {
-	border-radius: 4px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	background-color: #fff;
-	border: 0px solid white;
+    background: #fff;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 #head {
-    margin: 20px auto 20px;
-    padding: 12px;
-    width: 600px;
-}
-
-#content {
-    margin: 20px auto 20px;
-    padding: 12px;
-    width: 600px;
+    margin: 24px auto 18px;
+    max-width: 760px;
+    padding: 22px 28px;
 }
 
 #instructions {
-    margin: 40px auto 20px;
-    padding: 12px;
-    width: 600px;
+    margin: 0 auto 28px;
+    max-width: 760px;
+    padding: 28px;
 }
 
 h1 {
-    color: #333333;
-    font-size: 1.5em;
-    text-align: center
+    color: #111827;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    color: #111827;
+    font-size: 18px;
+    margin: 0 0 14px;
+}
+
+ul {
+    display: grid;
+    gap: 8px;
+    margin: 14px 0 22px;
+    padding-left: 22px;
+}
+
+li p {
+    margin: 0;
 }
 
 .shortcut_name {
-	width:120px;
-	display:inline-block;
+    display: inline-block;
+    width: 120px;
+}
+
+#remote_detector_options {
+    background: #f8fbff;
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+    margin-top: 24px;
+    padding: 18px;
+}
+
+#remote_detector_options p {
+    color: #52606d;
+    margin: 0 0 16px;
+}
+
+#remote_detector_options label {
+    align-items: center;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 180px minmax(0, 1fr);
+    margin: 12px 0;
+}
+
+#remote_detector_options label span {
+    color: #334e68;
+    font-weight: 600;
+}
+
+#remote_detector_options input,
+#remote_detector_options select {
+    background: #fff;
+    border: 1px solid #bcccdc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #102a43;
+    min-height: 36px;
+    padding: 7px 10px;
+    width: 100%;
+}
+
+#remote_detector_options input:focus,
+#remote_detector_options select:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.16);
+    outline: none;
+}
+
+#remote_detector_save {
+    background: #1a73e8;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 8px;
+    min-height: 36px;
+    padding: 0 18px;
+}
+
+#remote_detector_save:hover {
+    background: #1558b0;
+}
+
+#remote_detector_status {
+    color: #1e7e34;
+    margin-left: 12px;
+}
+
+#credits {
+    color: #52606d;
+    padding: 20px 0 0 !important;
+}
+
+#credits hr {
+    border: 0;
+    border-top: 1px solid #d9e2ec;
+    margin: 18px 0;
+}
+
+p[style] {
+    height: auto !important;
+}
+
+@media (max-width: 720px) {
+    #head,
+    #instructions {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    #remote_detector_options label {
+        grid-template-columns: 1fr;
+    }
 }

@@ -20,10 +20,37 @@
 	            <li><p i18n-content="extIntroductionWebFramework"></p></li>
 	            <li><p i18n-content="extIntroductionWebSever"></p></li>
 	        </ul>
+			<div id="remote_detector_options">
+				<h2 style="text-align: left;" i18n-content="remoteDetectorOptionsTitle"></h2>
+				<p i18n-content="remoteDetectorOptionsIntro"></p>
+				<label>
+					<span i18n-content="remoteDetectorProviderLabel"></span>
+					<select id="remote_detector_provider">
+						<option value="technologychecker">TechnologyChecker Free</option>
+						<option value="builtwith">BuiltWith Free API</option>
+					</select>
+				</label>
+				<label>
+					<span i18n-content="technologyCheckerApiKeyLabel"></span>
+					<input id="technology_checker_api_key" type="password" autocomplete="off">
+				</label>
+				<label>
+					<span i18n-content="builtwithFreeApiKeyLabel"></span>
+					<input id="builtwith_free_api_key" type="password" autocomplete="off">
+				</label>
+				<button id="remote_detector_save" type="button" i18n-content="optionsSave"></button>
+				<span id="remote_detector_status"></span>
+			</div>
 	        <div id="credits" style="padding:20px;">
 				<hr>
-				<span style="font-weight:bold;" i18n-content="extIntroductionSource"></span>
-				<span><a href="https://github.com/justjavac/ChromeSnifferPlus" target="_blank">https://github.com/justjavac/ChromeSnifferPlus</a></span>
+				<p>
+					<span style="font-weight:bold;" i18n-content="extIntroductionSource"></span>
+					<span><a href="https://github.com/logdns/ChromeSnifferPlus-new" target="_blank">https://github.com/logdns/ChromeSnifferPlus-new</a></span>
+				</p>
+				<p>
+					<span style="font-weight:bold;" i18n-content="extIntroductionUpstream"></span>
+					<span><a href="https://github.com/justjavac/ChromeSnifferPlus" target="_blank">https://github.com/justjavac/ChromeSnifferPlus</a></span>
+				</p>
 			</div>
 
 	        <p style="color:red;font-weight:bold;" i18n-content="extIntroductionNotice"></p>
@@ -31,5 +58,6 @@
 	    </div>
 		<script src="js/analytics.js"></script>
 		<script src="js/common.js"></script>
+		<script src="js/options.js"></script>
 	</body>
 </html>

@@ -8,7 +8,7 @@
 		"description": "extension short name."
 	},
 	"extDesc": {
-		"message": "探测当前网页所使用的类库、框架和服务器环境，为开发者提供了方便。",
+		"message": "探测当前网页所使用的类库、框架、服务器环境，并可选调用远程技术检测 API。",
 		"description": "extension description."
 	},
 	"extIntroTitle": {
@@ -31,8 +31,65 @@
 	"extIntroductionWebSever": {
 		"message": "服务器环境： PHP、Apache、nginx 等。"
 	},
+	"remoteDetectorOptionsTitle": {
+		"message": "远程技术检测"
+	},
+	"remoteDetectorOptionsIntro": {
+		"message": "可选调用免费的技术检测 API。目标分类包括 JavaScript 框架、内容分发网络（CDN）、安全、支付处理器、字体脚本、JavaScript 库、Web 框架、用户界面（UI）框架和编程语言。"
+	},
+	"remoteDetectorProviderLabel": {
+		"message": "免费 API 服务商"
+	},
+	"technologyCheckerApiKeyLabel": {
+		"message": "TechnologyChecker API Key"
+	},
+	"builtwithFreeApiKeyLabel": {
+		"message": "BuiltWith 免费 API Key"
+	},
+	"optionsSave": {
+		"message": "保存"
+	},
+	"optionsSaved": {
+		"message": "已保存"
+	},
+	"localDetectorTitle": {
+		"message": "本地检测"
+	},
+	"remoteDetectorButton": {
+		"message": "API 查询"
+	},
+	"remoteDetectorOptions": {
+		"message": "选项"
+	},
+	"remoteDetectorReady": {
+		"message": "免费 API 查询为可选功能"
+	},
+	"remoteDetectorLoading": {
+		"message": "查询中..."
+	},
+	"remoteDetectorFailed": {
+		"message": "远程检测失败。"
+	},
+	"remoteDetectorEmpty": {
+		"message": "未发现远程技术结果。"
+	},
+	"remoteDetectorMissingKey": {
+		"message": "请先在选项页配置所选免费 API 的 Key。"
+	},
+	"remoteDetectorUnsupportedUrl": {
+		"message": "仅支持查询 HTTP 和 HTTPS 页面。"
+	},
+	"remoteDetectorCategories": {
+		"message": "个分类"
+	},
+	"remoteDetectorConfidence": {
+		"message": "置信度"
+	},
 	"extIntroductionSource": {
 		"message": "源码地址"
+	},
+	"extIntroductionUpstream": {
+		"message": "上游项目"
 	},
 	"extIntroductionNotice": {
 		"message": "开发者总喜欢隐藏某些特征信息，所以可能存在误判。"
