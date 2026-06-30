@@ -1,4 +1,4 @@
-importScripts('api.js', 'apps.js', 'analytics.js');
+importScripts('apps.js', 'analytics.js');
 
 /**
  * Created with JetBrains PhpStorm.
@@ -180,21 +180,6 @@ async function handleDetectionResult(request, sender) {
                 tabId: tabId,
                 title: appTitle
             });
-        }
-
-        if ( ! /^(http|https):\/\/(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])/.test(sender.tab.url)
-                && ! /^(http|https):\/\/localhost/.test(sender.tab.url)) {
-            var data = {
-                "libs": JSON.stringify(thisTab['apps']),
-                "ip": thisTab['ip'],
-                "add_time": +new Date
-            };
-
-            await UsageStorage.set(sender.tab.url, data);
-
-            if (await UsageStorage.count() > 100) {
-                await UsageStorage.flushAndClear();
-            }
         }
 
         chrome.action.enable(tabId);
@@ -543,8 +528,4 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo) {
         removeTabInfo(tabId).catch(console.error);
         resetTabAction(tabId);
     }
-});
-
-chrome.runtime.onStartup.addListener(function(){
-    UsageStorage.flushAndClear().catch(console.error);
 });

@@ -39,19 +39,31 @@ Release-ready store assets are in [store-assets](./store-assets):
 - `screenshot-overview-1280x800.png`
 - `listing.md`
 
-## Build A Release ZIP
+## Build Store Packages
 
 From the repository root:
 
 ```bash
 rm -rf dist
-mkdir -p dist/chromesnifferplus-new
-rsync -a --exclude='.git' --exclude='.*' --exclude='dist' --exclude='scripts' --exclude='store-assets' --exclude='screenshot' ./ dist/chromesnifferplus-new/
-cd dist/chromesnifferplus-new
-zip -qr ../chromesnifferplus-new-mv3.zip .
+mkdir -p dist/chrome dist/edge dist/firefox
+rsync -a --exclude='.git' --exclude='.*' --exclude='dist' --exclude='scripts' --exclude='store-assets' --exclude='screenshot' ./ dist/chrome/
+rsync -a --exclude='.git' --exclude='.*' --exclude='dist' --exclude='scripts' --exclude='store-assets' --exclude='screenshot' ./ dist/edge/
+rsync -a --exclude='.git' --exclude='.*' --exclude='dist' --exclude='scripts' --exclude='store-assets' --exclude='screenshot' ./ dist/firefox/
+sed '1{/^importScripts/d;}' js/background.js > dist/firefox/js/background.js
+jq '.background = {"scripts":["js/apps.js","js/analytics.js","js/background.js"]} | .browser_specific_settings = {"gecko":{"id":"chromesnifferplus-new@logdns.github.io","strict_min_version":"109.0","data_collection_permissions":{"required":["browsingActivity"],"optional":[]}}}' manifest.json > dist/firefox/manifest.tmp
+mv dist/firefox/manifest.tmp dist/firefox/manifest.json
+(cd dist/chrome && zip -qr ../chromesnifferplus-new-chrome-mv3.zip .)
+(cd dist/edge && zip -qr ../chromesnifferplus-new-edge-mv3.zip .)
+(cd dist/firefox && zip -qr ../chromesnifferplus-new-firefox-mv3.zip .)
 ```
 
-Upload `dist/chromesnifferplus-new-mv3.zip` to the Chrome Web Store developer dashboard.
+Upload:
+
+- `dist/chromesnifferplus-new-chrome-mv3.zip` to Chrome Web Store.
+- `dist/chromesnifferplus-new-edge-mv3.zip` to Microsoft Edge Add-ons.
+- `dist/chromesnifferplus-new-firefox-mv3.zip` to Firefox Add-ons.
+
+Firefox uses a generated manifest with `background.scripts` and `browser_specific_settings.gecko`. Chrome and Edge use the source Manifest V3 `background.service_worker` manifest.
 
 ## Privacy
 
